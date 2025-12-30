@@ -6,7 +6,7 @@ function App() {
     <div className="portfolio-container">
       {/* Navbar */}
       <nav className="navbar">
-        <div className="logo">ATHARV<span> INGAVLE</span></div>
+        <div className="logo">ATHARV<span> INGAVALE</span></div>
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#stack">Stack</a></li>
