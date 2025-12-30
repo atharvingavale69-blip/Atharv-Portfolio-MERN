@@ -1,79 +1,104 @@
 import React from 'react';
+import './App.css';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white font-sans">
+    <div className="portfolio-container">
       {/* Navbar */}
-      <nav className="flex justify-between items-center p-6 bg-slate-800 shadow-lg border-b border-slate-700">
-        <h1 className="text-2xl font-bold text-blue-400 tracking-tight">Atharv Ingavale</h1>
-        <div className="hidden md:flex space-x-8 text-sm font-medium">
-          <a href="#about" className="hover:text-blue-400 transition cursor-pointer">About</a>
-          <a href="#experience" className="hover:text-blue-400 transition cursor-pointer">Experience</a>
-          <a href="#projects" className="hover:text-blue-400 transition cursor-pointer">Projects</a>
-          <a href="#contact" className="hover:text-blue-400 transition cursor-pointer">Contact</a>
-        </div>
+      <nav className="navbar">
+        <div className="logo">ATHARV<span> INGAVLE</span></div>
+        <ul className="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
 
       {/* Hero Section */}
-      <header className="flex flex-col items-center justify-center text-center py-28 px-4 bg-gradient-to-b from-slate-800 to-slate-900">
-        <span className="bg-blue-500/10 text-blue-400 text-xs font-bold px-4 py-1.5 rounded-full mb-6 border border-blue-500/20">
-          ASSOCIATE MERN STACK DEVELOPER
-        </span>
-        <h2 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight text-white">
-          Building <span className="text-blue-500">Scalable</span> Architecture <br /> 
-          & Intuitive UI/UX.
-        </h2>
-        <p className="text-gray-400 max-w-2xl text-lg mb-10 leading-relaxed">
-          Associate MERN Developer at Comtranse Technology. Passionate about 
-          crafting high-performance web applications and robust backend systems.
-        </p>
-        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold shadow-lg shadow-blue-500/20 transition-all active:scale-95">
-            View My Projects
-          </button>
-          <button className="border border-slate-600 hover:bg-slate-800 text-slate-300 px-10 py-4 rounded-xl font-bold transition-all active:scale-95">
-            Call: 8879142527
-          </button>
+      <header className="hero" id="about">
+        <div className="hero-content">
+          <h1>Hi, I'm <span className="highlight">Atharv Ingavale</span></h1>
+          <h2>Associate MERN Stack Developer</h2>
+          <p>
+            I build scalable web applications at Comtranse Technology, specializing in 
+            React, Node.js, and Python-driven architecture.
+          </p>
+          <div className="hero-btns">
+            <a href="#projects" className="btn primary">View My Work</a>
+            <button className="btn secondary" onClick={() => window.print()}>Download CV</button>
+          </div>
         </div>
       </header>
 
-      {/* Quick Skills Section */}
-      <section className="py-16 border-t border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-          <div className="group">
-            <p className="text-4xl font-black text-blue-500 group-hover:scale-110 transition">BE</p>
-            <p className="text-gray-400 text-sm mt-2 uppercase tracking-widest">Mumbai Univ.</p>
+      {/* Tech Stack Section */}
+      <section id="stack" className="stack-section">
+        <h3>My Tech Stack</h3>
+        <div className="stack-grid">
+          <div className="stack-item"><i className="fab fa-react"></i> <p>React</p></div>
+          <div className="stack-item"><i className="fab fa-node-js"></i> <p>Node.js</p></div>
+          <div className="stack-item"><i className="fas fa-database"></i> <p>MySQL & MongoDB</p></div>
+          <div className="stack-item"><i className="fab fa-python"></i> <p>Python</p></div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="projects">
+        <h3>Featured Projects</h3>
+        <div className="project-container">
+          {/* Project 1 */}
+          <div className="project-card">
+            <div className="project-info">
+              <h4>Catering Management System</h4>
+              <p>Developed interactive UI and management modules using React for catering business operations.</p>
+              <div className="tags">
+                <span>React</span><span>CSS</span><span>MERN</span>
+              </div>
+            </div>
           </div>
-          <div className="group">
-            <p className="text-4xl font-black text-blue-500 group-hover:scale-110 transition">React</p>
-            <p className="text-gray-400 text-sm mt-2 uppercase tracking-widest">Frontend</p>
+
+          {/* Project 2 */}
+          <div className="project-card">
+            <div className="project-info">
+              <h4>Admin Dashboard</h4>
+              <p>Created a robust dashboard with Node.js and MySQL for corporate data management.</p>
+              <div className="tags">
+                <span>Node.js</span><span>MySQL</span><span>Express</span>
+              </div>
+            </div>
           </div>
-          <div className="group">
-            <p className="text-4xl font-black text-blue-500 group-hover:scale-110 transition">NodeJS</p>
-            <p className="text-gray-400 text-sm mt-2 uppercase tracking-widest">Backend</p>
-          </div>
-          <div className="group">
-            <p className="text-4xl font-black text-blue-500 group-hover:scale-110 transition">MySQL</p>
-            <p className="text-gray-400 text-sm mt-2 uppercase tracking-widest">Database</p>
+
+          {/* Project 3 */}
+          <div className="project-card">
+            <div className="project-info">
+              <h4>Corporate Website</h4>
+              <p>Built a professional corporate presence using Loopback API and modern frontend tools.</p>
+              <div className="tags">
+                <span>Loopback</span><span>API</span><span>React</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Experience Summary */}
-      <section className="bg-slate-800/30 py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-bold mb-8">Professional Background</h3>
-          <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 text-left">
-            <h4 className="text-xl font-bold text-blue-400">Associate MERN Developer</h4>
-            <p className="text-gray-300 font-medium">Comtranse Technology PVT LTD</p>
-            <ul className="mt-4 text-gray-400 space-y-2 list-disc list-inside">
-              <li>Developing interactive Catering Management interfaces.</li>
-              <li>Managing complex Admin Dashboards using Node.js and MySQL.</li>
-              <li>Implementing Loopback API and Python-based logic for business systems.</li>
-            </ul>
-          </div>
+      {/* Contact Section */}
+      <section id="contact" className="contact">
+        <h3>Get In Touch</h3>
+        <div className="contact-details">
+          <p>Email: atharvingavale69@gmail.com</p>
+          <p>Phone: 8879142527</p>
         </div>
+        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Your Message" rows="5"></textarea>
+          <button type="submit" className="btn primary">Send Message</button>
+        </form>
       </section>
+
+      <footer>
+        <p>© 2025 Atharv Ingavale. Built with the MERN Stack.</p>
+      </footer>
     </div>
   );
 }
